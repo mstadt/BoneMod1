@@ -23,6 +23,7 @@ print('get SS')
 ST <- runsteady(IC, time = c(0,Inf), func = camod$model, parms = camod$param)
 #ST <- steady(IC, time = c(0,Inf), func = camod$model, parms = camod$param)
 print(ST$y)
+IC <- ST$y # make IC the ST value
 
 print('Running simulation')
 ## RUN THE MODEL
